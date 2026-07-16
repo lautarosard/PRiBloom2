@@ -1,0 +1,6 @@
+{
+  "name": "PrintBloom",
+  "description": "Catálogo de productos personalizados hechos con dedicación: impresión 3D, encuadernación artesanal y papelería creativa.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

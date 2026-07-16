@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  --font-serif: "Playfair Display", serif;
+  
+  --color-sakura-50: #FFF9FB;
+  --color-sakura-100: #FCE4EC;
+  --color-sakura-200: #FFB7C5;
+  --color-sakura-300: #FFA3B1;
+  --color-sakura-400: #F86F86;
+  --color-sakura-500: #D81B60;
+  --color-sakura-600: #AD1457;
+  --color-sakura-700: #880E4F;
+  
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-petal-fall: petal-fall 12s linear infinite;
+  --animate-sway: sway 4s ease-in-out infinite alternate;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes sway {
+  0% { transform: rotate(-5deg) translateX(-5px); }
+  100% { transform: rotate(5deg) translateX(5px); }
+}
+
+@keyframes petal-fall {
+  0% {
+    transform: translateY(-10%) translateX(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(110vh) translateX(100px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #FFF9FB;
+  color: #5D4037;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar matching Sakura theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fdfafb;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ffccd4;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ffa3b1;
+}
